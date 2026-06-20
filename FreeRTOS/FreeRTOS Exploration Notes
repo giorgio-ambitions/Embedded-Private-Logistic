@@ -1,0 +1,5 @@
+This folder contains the material I am producing while studying Real-Time Operating Systems (RTOS), with a focus on FreeRTOS internals.
+
+My goal is to understand how an RTOS kernel is structured, how its core components interact (tasks, scheduling, lists, queues, timers), and how these mechanisms are implemented at a low level.
+
+The documents here summarize what I have learned during this exploration and highlight the concepts, patterns, and design decisions that are most relevant for embedded systems development.
