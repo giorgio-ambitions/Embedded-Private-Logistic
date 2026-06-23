@@ -1,44 +1,73 @@
-# FreeRTOS Exploration
+# FreeRTOS Internal Architecture Exploration
 
-This folder contains the material produced during my study of Real-Time Operating Systems (RTOS), with a focus on the internal architecture of FreeRTOS.  
-The goal of this exploration is to understand how a small real-time kernel is structured, how its components interact, and how deterministic behavior is achieved on embedded systems.
+## Purpose
 
----
+This repository documents a structured exploration of the internal architecture of FreeRTOS.  
+The objective is to understand how a small real‑time kernel achieves deterministic and predictable behavior on embedded systems.
 
-## 📂 What this folder contains
-- **FreeRTOS-Changes.odt** — Notes about kernel changes, internal mechanisms, and behavior observed during the study.
-- **FreeRTOS-Roadmap.odt** — A roadmap of the topics explored and the next areas I plan to investigate.
-- **Exploration Notes (this file)** — A high-level summary of the concepts learned.
+## Scope
 
----
+The study focuses on:
 
-## 🧠 Key Concepts Studied
-- Task creation and management  
-- Context switching and scheduling  
-- Tick interrupt and time slicing  
-- Queues, lists, and synchronization primitives  
-- Memory allocation strategies (heap_1, heap_2, heap_4)  
-- Timer service task  
-- Deterministic behavior and real-time constraints  
+- Task lifecycle and state transitions  
+- Deterministic scheduling and context switching  
+- Tick interrupt handling and time‑base generation  
+- Queue and list implementation  
+- Memory allocation strategies (`heap_1`, `heap_2`, `heap_4`)  
+- Timer service task and deferred execution  
+- Real‑time constraints and predictability  
 
----
+## Repository Structure
 
-## 🔍 Technical Insights
-During this exploration I focused on:
-- Understanding how the scheduler selects the next task  
-- Analyzing how FreeRTOS implements ready lists and delayed lists  
-- Inspecting the role of the SysTick interrupt  
-- Studying how queues are implemented internally  
-- Observing how FreeRTOS ensures predictable execution in constrained environments  
+- **FreeRTOS-Changes.odt**  
+  Detailed notes on kernel mechanisms, internal behavior, and architectural decisions.
 
----
+- **FreeRTOS-Roadmap.odt**  
+  Structured roadmap of explored topics and planned next steps.
 
-## 🚀 Next Steps
-- Explore interrupt nesting and priority handling  
-- Analyze FreeRTOS+Trace and runtime statistics  
-- Study memory fragmentation and allocation strategies  
-- Compare FreeRTOS behavior on different MCUs  
+- **Exploration Notes**  
+  High‑level summary of findings and engineering insights.
 
----
+## Engineering Insights
 
-If you want to follow the evolution of this study, check the pull requests and commits associated with this folder.
+Key aspects analyzed:
+
+- How the scheduler selects the next runnable task  
+- How ready lists and delayed lists are organized to guarantee deterministic behavior  
+- How the SysTick interrupt drives context switching  
+- How queues and synchronization primitives are implemented internally  
+- How FreeRTOS maintains predictable execution under load  
+- How memory allocation strategies influence fragmentation and timing guarantees  
+
+## Deterministic Parser Work
+
+As part of this study, deterministic parsing techniques used in embedded systems were investigated:
+
+- Finite‑state machine (FSM) design  
+- Input validation and boundary checking  
+- Rollback‑free parsing  
+- MISRA‑like patterns  
+- Buffer‑safe iteration  
+- Deterministic error handling  
+
+These techniques are directly applicable to real‑time kernels and safety‑critical software.
+
+## Next Steps
+
+Planned areas of further analysis:
+
+- Interrupt nesting and priority handling  
+- Runtime statistics and tracing tools  
+- Memory fragmentation patterns  
+- Behavior comparison across different MCU architectures  
+- Extension of deterministic parsing techniques to more complex data structures  
+
+## Version Control and Documentation
+
+All progress is tracked through commits and pull requests to ensure:
+
+- Traceability  
+- Reproducibility  
+- Engineering discipline  
+- Clear documentation of design decisions  
+
