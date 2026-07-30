@@ -1,2 +1,2 @@
 # Embedded
-I show some skills I've picked up in open-source projects that are useful in the embedded world
+This repository focuses on AI‑enhanced embedded systems for industrial automation and robotics, integrating machine‑learning models into real‑time control and edge devices.
